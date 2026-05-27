@@ -1,0 +1,165 @@
+/* Global Styles dengan Tailwind CSS */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Font import */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* Base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background-color: #FBFBFA;
+  color: #2D312E;
+  line-height: 1.6;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 32px;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+p {
+  color: #2D312E;
+}
+
+small, .text-sm {
+  color: #717672;
+  font-size: 14px;
+}
+
+/* Links */
+a {
+  color: #4A6B5D;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: #3A5A4D;
+}
+
+/* Form elements */
+input,
+textarea,
+select {
+  font-family: inherit;
+  font-size: 16px; /* Prevent zoom on iOS */
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+}
+
+/* Remove default button styles */
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+/* Scrollbar styling (optional, for webkit browsers) */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FBFBFA;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #E8E8E8;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #717672;
+}
+
+/* Utility classes */
+.container-max {
+  @apply max-w-container mx-auto px-4 md:px-6 lg:px-8;
+}
+
+.text-truncate {
+  @apply truncate;
+}
+
+.text-clamp {
+  @apply line-clamp-3;
+}
+
+.flex-center {
+  @apply flex items-center justify-center;
+}
+
+.flex-between {
+  @apply flex items-center justify-between;
+}
+
+.card-base {
+  @apply bg-white border border-border-light rounded-xl p-4 shadow-sm transition-shadow duration-200;
+}
+
+.card-base:hover {
+  @apply shadow-md;
+}
+
+.btn-base {
+  @apply px-6 py-3 rounded-lg font-semibold transition-colors duration-200 min-h-touch;
+}
+
+.btn-primary {
+  @apply btn-base bg-primary text-white hover:bg-[#3A5A4D];
+}
+
+.btn-secondary {
+  @apply btn-base bg-primary-light text-primary hover:opacity-80;
+}
+
+.btn-danger {
+  @apply btn-base bg-negative text-white hover:bg-[#b85a48];
+}
+
+.input-base {
+  @apply w-full border border-border-light rounded-lg px-3.5 py-3 text-base focus:border-primary focus:outline-none transition-colors duration-200;
+}
+
+.input-base::placeholder {
+  @apply text-text-muted opacity-60;
+}
+
+/* Responsive utilities */
+@media (max-width: 1023px) {
+  body {
+    padding-bottom: 80px; /* Space for bottom nav */
+  }
+}

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <style>
+      .bg { fill: #4A6B5D; }
+      .text { fill: #FBFBFA; font-size: 200px; font-weight: bold; font-family: Arial; text-anchor: middle; }
+    </style>
+  </defs>
+  <rect class="bg" width="512" height="512"/>
+  <text class="text" x="256" y="340">₹</text>
+</svg>
