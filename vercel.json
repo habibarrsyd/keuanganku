@@ -3,7 +3,6 @@
   "devCommand": "npm run dev",
   "installCommand": "npm install",
   "framework": "nextjs",
-  "env": {},
   "functions": {
     "api/**/*.ts": {
       "runtime": "nodejs18.x"
